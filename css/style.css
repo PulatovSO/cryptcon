@@ -29,12 +29,6 @@ a {
   margin: 0 auto;
 }
 
-.paragraph {
-}
-
-.title {
-}
-
 .btn {
   font-weight: 600;
   letter-spacing: 1px;
@@ -67,7 +61,18 @@ a {
   cursor: pointer;
 }
 
+.paragraph {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: var(--secondary);
+  line-height: 1.5em;
+}
 /* /HEADER =====================================*/
 
+
+/* HERO =====================================*/
+
+/* /HERO =====================================*/
 
 
