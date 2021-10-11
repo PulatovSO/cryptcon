@@ -16,7 +16,7 @@
 
   .header__nav {
     margin: 0;
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     background: var(--primary);
