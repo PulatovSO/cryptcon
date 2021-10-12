@@ -1,3 +1,4 @@
+
 /* MEDIA ####################################################### */
 @media (min-width: 300px){
 
@@ -468,14 +469,28 @@
   .bcard {
     padding: 30px;
   }
-
-  .bcard__hidden,
-  .bcard__hidden2 {
-    display: none;
+  
+  .bcard__image {
+    height: 200px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 5px;
   }
 
   .bcard__img {
     width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .bcard:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+
+  .bcard__hidden,
+  .bcard__hidden2 {
+    display: none;
   }
 
   .bcard__title {
@@ -521,9 +536,246 @@
   /* /BLOG ====================== */
 
   /* ICO ======================== */
+  #ico {
+    background: #f2f7ff;
+  }
+
+  #ico ul, #ico li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .ico__desc {
+    order: 1;
+    padding: 120px 0;
+    padding-left: 10px;
+    margin: 0 auto;
+  }
+
+  .ico__inner {
+    margin: 0 auto;
+    width: 90%;
+  }
   
+  .ico__image-wrap {
+    order: 2;
+  }
+
+  .ico__img {
+    max-width: 100%;
+  }
+
+  .ico__paragraph,
+  .ico__item {
+    margin-top: -25px;
+    font-size: 13px;
+    line-height: 1.8em;
+    color: var(--secondary);
+  }
+
+  #ico li {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  .ico__item::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+  }
+
+  .ico__btn {
+    display: inline-block;
+    margin-top: 55px;
+  }
   /* /ICO ======================== */
+
+  /* FAQs ======================== */
+  #faq {
+    padding: 100px 0;
+  }
+
+  .faq__title {
+    margin-bottom: 0;
+  }
+
+  .faq__paragraph {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .faq__list-wrap {
+    width: 100%;
+  }
+
+  .faq__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .faq__item {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .faq__item:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    bottom: -10px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.2s ease-in-out;
+  }
   
+  .faq__item button {
+    text-transform: uppercase;
+    color: var(--secondary);
+    background: none;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .faq__item:hover button,
+  .faq__item--active button {
+    color: var(--primary);
+  }
+
+  .faq__item:hover::after,
+  .faq__item--active:after {
+    width: 80%;
+  }
+
+  .faq__contents {
+    margin-top: 30px;
+  }
+
+  .faq__content {
+    margin-bottom: 20px;
+  }
+
+  .faq__content-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .faq__content-title:hover {
+    color: var(--secondary);
+  }
+
+  .faq__content-paragraph {
+    width: 95%;
+    font-size: 13px;
+    color: var(--secondary);
+    line-height: 2em;
+  }
+  /* /FAQs ======================== */
+  
+  /* FOOTER ======================= */
+  #site-footer {
+    padding-top: 100px;
+    background: #f2f7ff;
+  }
+
+  .footer__socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__social {
+    position: relative;
+    left: -40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background: #ddd;
+    color: #999;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .footer__lists-wrap{
+    margin-top: 0;
+  }
+
+  .footer__col-item {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.5em;
+  }
+
+  .footer__newsletter {
+    margin-top: -20px;
+    position: relative;
+    left: 50px;
+  }
+
+  .newsletter__title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .footer__input {
+    padding: 20px;
+    border-radius: 5px;
+    padding-left: 25px;
+    border: 0;
+  }
+
+  .footer__btn {
+    position: relative;
+    left: -100px;
+    padding: 20px;
+    color: #fff;
+    background: var(--primary);
+    border-radius: 5px;
+    border: 0;
+  }
+
+  .footer__line {
+    width: 100%;
+    height: 1px;
+    background: #d1d1d1;
+  }
+
+  .footer__bottom {
+    height: 100px;
+  }
+
+  .footer__copy,
+  .footer__policy a {
+    font-size: 14px;
+    line-height: 2em;
+  }
+
+  .footer__copy a {
+    color: var(--primary);
+  }
+
+  .footer__policy a {
+    margin: 0 30px;
+  }
+
+  /* FOOTER ======================= */
 }
 
 
@@ -541,6 +793,26 @@
   .token__img {
     width: unset;
   }
+
+  .ico__inner {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .ico__desc {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .ico__img {
+    max-width: 450px;
+  }
+
+    /* FAQ ====================== */
+    .faq__list {
+      width: 80%;
+    }
+    /* /FAQ ====================== */
 }
 
 
@@ -627,6 +899,24 @@
     display: unset;
   }
   /* /BLOG ====================== */
+
+  /* ICO ======================= */
+  
+  .ico__inner {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .ico__desc {
+    margin: 0 auto;
+    width: 50%;
+  }
+  
+  /* FAQ ====================== */
+  .faq__list {
+    width: 70%;
+  }
+  /* /FAQ ====================== */
 
 }
 
@@ -841,16 +1131,42 @@
     padding: 10px;
   }
 
-
-  .bcard:nth-child(2) img {
-    /* height: 228px; */
-    height: 49%;
-  }
-
   .bcard__hidden {
     display: unset;
   }
   /* /BLOG ====================== */
+
+  /* ICO ======================== */
+
+  .ico__inner {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .ico__desc {
+    order: 2;
+    margin: unset;
+    width: unset;
+  }
+
+  .ico__image-wrap {
+    position: relative;
+  }
+
+  .ico__img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  /* ICO ======================== */
+
+  /* FAQS ======================== */
+  .faq__list {
+    width: 50%;
+  }
+  /* /FAQS ======================== */
+
   
 }
 
@@ -858,11 +1174,6 @@
 /* MEDIA ####################################################### */
 @media (min-width: 1200px){
     /* BLOG ====================== */
-    .bcard:nth-child(2) img {
-      /* height: 228px; */
-      height: 59%;
-    }
-  
     .bcard__hidden {
       display: unset;
     }
